@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Cyber Harassment DEMS{% endblock %}</title>
+  <title>{% block title %}SafeProof Evidence Manager{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
   {% block head %}{% endblock %}
 </head>
 <body>
   <nav class="navbar">
-    <div><span class="brand">Cyber Harassment DEMS</span></div>
+    <div style="display: flex; align-items: center;">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="SafeProof Logo" class="navbar-logo" onerror="this.style.display='none'" />
+      <span class="brand">SafeProof Evidence Manager</span>
+    </div>
     <div id="nav-links">
       <a href="/">Home</a>
       <a href="/dashboard" id="nav-dashboard">Dashboard</a>
