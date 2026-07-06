@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}Dashboard - SafeProof Evidence Manager{% endblock %}
 {% block content %}
 <div id="hotline-container"></div>
 
@@ -10,7 +10,7 @@
   <input type="text" id="title" maxlength="200" />
   <label for="description">What happened?</label>
   <textarea id="description" rows="5" placeholder="Describe what happened, including dates and platforms involved."></textarea>
-  <label><input type="checkbox" id="is_anonymous" style="width:auto;display:inline;margin-right:0.5rem;" />File anonymously (staff can still assist you, but your identity is hidden from the public record)</label>
+  <label><input type="checkbox" id="is_anonymous" style="width:auto;display:inline;margin-right:0.5rem;" />File anonymously (staff can still assist you, but your identity is hidden from the public)</label>
   <button id="create-case-btn" class="btn" style="margin-top:0.75rem;">Submit case</button>
 </div>
 
