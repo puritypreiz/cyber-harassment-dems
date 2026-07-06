@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Cyber Harassment DEMS — Home{% endblock %}
+{% block content %}
+<div id="hotline-container"></div>
+
+<div class="card">
+  <h1>A safe place to document and report cyber harassment</h1>
+  <p>
+    This system helps students securely capture evidence of online harassment,
+    track their case, and connect with support &mdash; with encryption, tamper-evident
+    audit trails, and QR-verified evidence at every step.
+  </p>
+  <p>
+    <a class="btn" href="/register">Get started</a>
+    <a class="btn secondary" href="/login">Log in</a>
+  </p>
+</div>
+
+<div class="card">
+  <h2>How it works</h2>
+  <ol>
+    <li>Create a confidential (optionally anonymous) account.</li>
+    <li>Open a case and upload evidence — files are encrypted (AES-256) and hashed (SHA-256) on upload.</li>
+    <li>Each evidence item gets a signed QR code proving its integrity for chain-of-custody purposes.</li>
+    <li>A counselor is assigned automatically; legal staff can be looped in for serious cases.</li>
+  </ol>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/support_resources.js') }}"></script>
+<script>renderSupportResources("hotline-container");</script>
+{% endblock %}

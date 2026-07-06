@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div id="hotline-container"></div>
+
+<div class="card">
+  <h1>File a new case</h1>
+  <div id="create-case-alert"></div>
+  <label for="title">Title</label>
+  <input type="text" id="title" maxlength="200" />
+  <label for="description">What happened?</label>
+  <textarea id="description" rows="5" placeholder="Describe what happened, including dates and platforms involved."></textarea>
+  <label><input type="checkbox" id="is_anonymous" style="width:auto;display:inline;margin-right:0.5rem;" />File anonymously (staff can still assist you, but your identity is hidden from the public record)</label>
+  <button id="create-case-btn" class="btn" style="margin-top:0.75rem;">Submit case</button>
+</div>
+
+<div class="card">
+  <h2>My cases</h2>
+  <div id="case-list"></div>
+</div>
+
+<div id="evidence-section"></div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/support_resources.js') }}"></script>
+<script src="{{ url_for('static', filename='js/components/case_status.js') }}"></script>
+<script src="{{ url_for('static', filename='js/components/evidence_uploader.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/dashboard.js') }}"></script>
+{% endblock %}

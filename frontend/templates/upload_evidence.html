@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Upload Evidence{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Case evidence</h1>
+  <div id="case-summary"></div>
+</div>
+
+<div id="uploader-container"></div>
+
+<div class="card">
+  <h2>Evidence items</h2>
+  <div id="evidence-list"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/case_status.js') }}"></script>
+<script src="{{ url_for('static', filename='js/components/evidence_uploader.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/upload_evidence.js') }}"></script>
+{% endblock %}

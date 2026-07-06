@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Reports{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Chain-of-custody report</h1>
+  <p class="form-help">Enter a case ID to generate and download a signed chain-of-custody PDF (admin, legal, or the assigned counselor only).</p>
+  <label for="report-case-id">Case ID</label>
+  <input type="text" id="report-case-id" />
+  <button id="report-download-btn" class="btn" style="margin-top:0.75rem;">Download report</button>
+  <div id="report-result" style="margin-top:0.75rem;"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/reports.js') }}"></script>
+{% endblock %}

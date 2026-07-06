@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Admin dashboard</h1>
+  <p class="form-help">User management, audit trail integrity, and data-retention review.</p>
+</div>
+
+<div class="card">
+  <h2>Users</h2>
+  <div id="user-list"></div>
+</div>
+
+<div class="card">
+  <h2>Audit log integrity</h2>
+  <button id="verify-chain-btn" class="btn">Verify audit chain</button>
+  <div id="chain-result" style="margin-top:0.75rem;"></div>
+  <div id="audit-log-table" style="margin-top:1rem;"></div>
+</div>
+
+<div class="card">
+  <h2>Data retention review</h2>
+  <p class="form-help">Closed cases past the retention window - review before any purge.</p>
+  <div id="retention-list"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/admin_dashboard.js') }}"></script>
+{% endblock %}

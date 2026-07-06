@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Evidence Details{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Evidence details</h1>
+  <div id="evidence-detail" data-evidence-id="{{ evidence_id }}"></div>
+</div>
+
+<div class="card">
+  <h2>Chain of custody</h2>
+  <div id="qr-preview" class="qr-preview"></div>
+  <button id="verify-btn" class="btn">Re-verify integrity</button>
+  <button id="download-btn" class="btn secondary">Download original</button>
+  <div id="verify-result" style="margin-top:0.75rem;"></div>
+</div>
+
+<div id="qr-scanner-container"></div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/qr_scanner.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/evidence_details.js') }}"></script>
+{% endblock %}

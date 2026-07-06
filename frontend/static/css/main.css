@@ -1,0 +1,131 @@
+:root {
+  --color-bg: #f7f5fb;
+  --color-surface: #ffffff;
+  --color-primary: #4b2e83;
+  --color-primary-dark: #34205c;
+  --color-accent: #b34a7a;
+  --color-text: #26202e;
+  --color-muted: #6b6577;
+  --color-border: #e1dbee;
+  --color-success: #2e7d4f;
+  --color-warning: #b8860b;
+  --color-danger: #b3261e;
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(38, 32, 46, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.navbar {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a { color: white; margin-left: 1rem; }
+.navbar .brand { font-weight: 700; font-size: 1.1rem; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h1, h2, h3 { color: var(--color-primary-dark); }
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.btn:hover { background: var(--color-primary-dark); }
+.btn.secondary { background: var(--color-surface); color: var(--color-primary); border: 1px solid var(--color-primary); }
+.btn.danger { background: var(--color-danger); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+label { display: block; font-weight: 600; margin: 0.75rem 0 0.25rem; }
+input, textarea, select {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--color-primary); }
+
+.form-help { color: var(--color-muted); font-size: 0.85rem; }
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+.alert.error { background: #fdecea; color: var(--color-danger); border: 1px solid #f5c6c1; }
+.alert.success { background: #e9f6ee; color: var(--color-success); border: 1px solid #b9e3c8; }
+.alert.info { background: #eef0fb; color: var(--color-primary-dark); border: 1px solid #cfd3f2; }
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.badge.severity-low { background: #e2f0e6; color: var(--color-success); }
+.badge.severity-medium { background: #fdf3d8; color: var(--color-warning); }
+.badge.severity-high { background: #fbe2da; color: #c15a2e; }
+.badge.severity-critical { background: #fbdada; color: var(--color-danger); }
+.badge.status-open { background: #e4e9fb; color: #34419c; }
+.badge.status-under_review { background: #fdf3d8; color: var(--color-warning); }
+.badge.status-escalated { background: #fbdada; color: var(--color-danger); }
+.badge.status-resolved,
+.badge.status-closed { background: #e2f0e6; color: var(--color-success); }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+
+.timeline-item { border-left: 3px solid var(--color-primary); padding: 0.4rem 0 0.4rem 1rem; margin-bottom: 0.4rem; }
+.timeline-item .ts { color: var(--color-muted); font-size: 0.8rem; }
+
+.hotline-banner {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.hidden { display: none !important; }
+
+.qr-preview img { max-width: 220px; border: 1px solid var(--color-border); border-radius: 8px; }
+
+footer { text-align: center; color: var(--color-muted); font-size: 0.8rem; padding: 2rem 1rem; }

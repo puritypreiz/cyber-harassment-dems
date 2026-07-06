@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Legal Dashboard{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Legal dashboard</h1>
+  <p class="form-help">Cases assigned to you. Export a chain-of-custody report for any case.</p>
+</div>
+<div id="case-list"></div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/case_status.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/legal_dashboard.js') }}"></script>
+{% endblock %}
