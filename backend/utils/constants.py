@@ -63,18 +63,18 @@ class AuditAction:
 
 NATIONAL_CRISIS_RESOURCES = [
     {
-        "name": "National Sexual Assault Hotline",
-        "contact": "1-800-656-4673",
-        "available": "24/7",
+        "name": "ADUN Counselling",
+        "contact": "+2348125744137 / counselling@edu.ng",
+        "available": "Institutional counselling service",
     },
     {
-        "name": "Crisis Text Line",
-        "contact": "Text HOME to 741741",
-        "available": "24/7",
+        "name": "Stand to End Rape (STER) Support",
+        "contact": "0809 596 7000",
+        "available": "Helpline",
     },
     {
-        "name": "Cyber Civil Rights Initiative",
-        "contact": "https://cybercivilrights.org",
-        "available": "Online resources & helpline",
+        "name": "WARIF 24 Hr Helpline",
+        "contact": "+234 809 210 0009",
+        "available": "24/7",
     },
 ]

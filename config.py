@@ -85,7 +85,7 @@ class Config:
 
     DATA_RETENTION_DAYS_DEFAULT = int(os.environ.get("DATA_RETENTION_DAYS_DEFAULT", "1825"))  # 5 years
 
-    NATIONAL_HOTLINE_NUMBER = os.environ.get("NATIONAL_HOTLINE_NUMBER", "1-800-000-0000")
+    NATIONAL_HOTLINE_NUMBER = os.environ.get("NATIONAL_HOTLINE_NUMBER", "WARIF 24 Hr Helpline: +234 809 210 0009")
 
     SMTP_HOST = os.environ.get("SMTP_HOST")
     SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))

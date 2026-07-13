@@ -1,0 +1,142 @@
+cyber-harassment-dems/
+│
+├── app.py                         # Flask application entry point
+├── config.py                      # Application configuration
+├── requirements.txt               # Python dependencies
+├── .env                           # Environment variables
+├── Dockerfile
+├── docker-compose.yml
+├── README.md
+│
+├── backend/
+│   │
+│   ├── auth/
+│   │   ├── jwt_handler.py         # JWT authentication
+│   │   ├── roles.py               # Role-Based Access Control (RBAC)
+│   │   ├── mfa.py                 # Multi-Factor Authentication
+│   │   ├── password_manager.py    # Password hashing (bcrypt)
+│   │   └── auth_service.py        # Login & registration logic
+│   │
+│   ├── evidence/
+│   │   ├── evidence_service.py    # Upload & retrieve evidence
+│   │   ├── encryption.py          # AES-256 encryption
+│   │   ├── hash_verify.py         # SHA-256 integrity verification
+│   │   ├── qr_generator.py        # QR code generation
+│   │   ├── qr_verifier.py         # QR verification
+│   │   ├── metadata.py            # Evidence metadata extraction
+│   │   └── file_validator.py      # Secure file validation
+│   │
+│   ├── harassment/
+│   │   ├── case_service.py
+│   │   ├── classification.py
+│   │   ├── severity_assessment.py
+│   │   ├── timeline.py
+│   │   └── notifications.py       # Email/SMS notifications
+│   │
+│   ├── chain_of_custody/
+│   │   ├── audit_log.py
+│   │   ├── digital_signature.py
+│   │   ├── evidence_history.py
+│   │   └── export_report.py
+│   │
+│   ├── victim_support/
+│   │   ├── resources.py
+│   │   ├── hotline.py
+│   │   ├── support_plan.py
+│   │   └── counselor_assignment.py
+│   │
+│   ├── privacy/
+│   │   ├── anonymizer.py
+│   │   ├── consent_manager.py
+│   │   ├── data_retention.py
+│   │   └── privacy_policy.py
+│   │
+│   ├── security/
+│   │   ├── access_control.py
+│   │   ├── csrf_protection.py
+│   │   ├── rate_limiter.py
+│   │   ├── input_validation.py
+│   │   ├── secure_headers.py
+│   │   └── session_manager.py
+│   │
+│   ├── database/
+│   │   ├── models/
+│   │   │   ├── user.py
+│   │   │   ├── evidence.py
+│   │   │   ├── case.py
+│   │   │   ├── qr_code.py
+│   │   │   ├── audit_log.py
+│   │   │   ├── consent.py
+│   │   │   └── notification.py
+│   │   │
+│   │   ├── migrations/
+│   │   ├── seed.py
+│   │   ├── database.py
+│   │   └── indexes.py
+│   │
+│   ├── api/
+│   │   ├── auth_routes.py
+│   │   ├── evidence_routes.py
+│   │   ├── harassment_routes.py
+│   │   ├── reports_routes.py
+│   │   ├── qr_routes.py
+│   │   └── admin_routes.py
+│   │
+│   └── utils/
+│       ├── logger.py
+│       ├── helpers.py
+│       ├── validators.py
+│       └── constants.py
+│
+├── frontend/
+│   │
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   ├── dashboard.html
+│   │   ├── upload_evidence.html
+│   │   ├── evidence_details.html
+│   │   ├── admin_dashboard.html
+│   │   ├── counselor_dashboard.html
+│   │   ├── legal_dashboard.html
+│   │   └── reports.html
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   ├── images/
+│   │   └── uploads/
+│   │
+│   └── components/
+│       ├── qr_scanner/
+│       ├── evidence_uploader/
+│       ├── timeline/
+│       ├── case_status/
+│       └── support_resources/
+│
+├── storage/
+│   ├── encrypted_evidence/
+│   ├── decrypted_temp/
+│   ├── qr_codes/
+│   ├── reports/
+│   └── backups/
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   ├── security/
+│   └── performance/
+│
+├── docs/
+│   ├── API_DOCUMENTATION.md
+│   ├── USER_GUIDE.md
+│   ├── DEPLOYMENT_GUIDE.md
+│   ├── SECURITY_POLICY.md
+│   ├── INCIDENT_RESPONSE.md
+│   └── LEGAL_COMPLIANCE.md
+│
+└── logs/
+    ├── application.log
+    ├── security.log
+    └── audit.log

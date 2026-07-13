@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Case Details{% endblock %}
+{% block content %}
+<div class="card" id="case-summary" data-case-id="{{ case_id }}"></div>
+
+<div class="card" id="status-section"></div>
+
+<div class="card">
+  <h2>Evidence</h2>
+  <div id="evidence-list"></div>
+  <a class="btn secondary" href="/upload-evidence?case_id={{ case_id }}" style="margin-top:0.5rem;">Manage evidence</a>
+</div>
+
+<div class="card">
+  <h2>Chain-of-custody timeline</h2>
+  <div id="case-timeline"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/case_status.js') }}"></script>
+<script src="{{ url_for('static', filename='js/components/timeline.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/case_detail.js') }}"></script>
+{% endblock %}

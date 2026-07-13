@@ -96,6 +96,10 @@ def create_app(config_object=None):
     def evidence_details_page(evidence_id):
         return render_template("evidence_details.html", evidence_id=evidence_id)
 
+    @app.route("/cases/<case_id>")
+    def case_detail_page(case_id):
+        return render_template("case_detail.html", case_id=case_id)
+
     @app.route("/admin")
     def admin_dashboard_page():
         return render_template("admin_dashboard.html")
