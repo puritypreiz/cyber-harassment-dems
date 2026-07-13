@@ -7,7 +7,7 @@ def apply_secure_headers(response):
     response.headers["Cache-Control"] = "no-store"
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
-        "img-src 'self' data:; "
+        "img-src 'self' data: blob:; "
         "style-src 'self' 'unsafe-inline'; "
         "script-src 'self'; "
         "object-src 'none'; "
